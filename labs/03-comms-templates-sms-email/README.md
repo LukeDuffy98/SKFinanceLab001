@@ -15,7 +15,7 @@
 - Facilitator has already prepared a content safety capability or policy check for the lab.
 
 ### Downloads (one click)
-- (Optional) [Download `architecture-lab3.svg`](assets/architecture-lab3.svg?raw=1)
+- (Optional) <a href="assets/architecture-lab3.svg?raw=1" target="_blank" rel="noopener noreferrer">Download `architecture-lab3.svg`</a>
 
 ## Estimated time
 35 minutes

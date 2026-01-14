@@ -22,8 +22,8 @@
 	- File name: `synthetic-call.wav`
 
 ### Downloads (one click)
-- [Download `synthetic-call.wav`](synthetic-call.wav?raw=1)
-- (Optional) [Download `architecture-lab2.svg`](assets/architecture-lab2.svg?raw=1)
+- <a href="synthetic-call.wav?raw=1" target="_blank" rel="noopener noreferrer">Download `synthetic-call.wav`</a>
+- (Optional) <a href="assets/architecture-lab2.svg?raw=1" target="_blank" rel="noopener noreferrer">Download `architecture-lab2.svg`</a>
 
 ## Estimated time
 40 minutes

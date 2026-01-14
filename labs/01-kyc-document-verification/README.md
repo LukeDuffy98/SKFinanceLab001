@@ -19,10 +19,10 @@
 	- In this repo, the file is located at: `labs/01-kyc-document-verification/samples/synthetic-kyc-id.jpg`
 
 ### Downloads (one click)
-- [Download `synthetic-kyc-id.jpg`](samples/synthetic-kyc-id.jpg?raw=1)
-- (Optional) [Download `synthetic-kyc-id-2.jpg`](samples/synthetic-kyc-id-2.jpg?raw=1)
-- (Optional) [Download `synthetic-kyc-id-3.jpg`](samples/synthetic-kyc-id-3.jpg?raw=1)
-- (Optional) [Download `architecture-lab1.svg`](assets/architecture-lab1.svg?raw=1)
+- <a href="samples/synthetic-kyc-id.jpg?raw=1" target="_blank" rel="noopener noreferrer">Download `synthetic-kyc-id.jpg`</a>
+- (Optional) <a href="samples/synthetic-kyc-id-2.jpg?raw=1" target="_blank" rel="noopener noreferrer">Download `synthetic-kyc-id-2.jpg`</a>
+- (Optional) <a href="samples/synthetic-kyc-id-3.jpg?raw=1" target="_blank" rel="noopener noreferrer">Download `synthetic-kyc-id-3.jpg`</a>
+- (Optional) <a href="assets/architecture-lab1.svg?raw=1" target="_blank" rel="noopener noreferrer">Download `architecture-lab1.svg`</a>
 
 ## Estimated time
 40 minutes
