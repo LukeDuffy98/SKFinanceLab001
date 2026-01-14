@@ -21,6 +21,10 @@
 - You have a synthetic call audio file in this lab folder:
 	- File name: `synthetic-call.wav`
 
+### Downloads (one click)
+- [Download `synthetic-call.wav`](synthetic-call.wav?raw=1)
+- (Optional) [Download `architecture-lab2.svg`](assets/architecture-lab2.svg?raw=1)
+
 ## Estimated time
 40 minutes
 

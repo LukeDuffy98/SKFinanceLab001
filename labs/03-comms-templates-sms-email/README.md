@@ -14,6 +14,9 @@
 	- Chat model deployment name: <FACILITATOR_PROVIDES>
 - Facilitator has already prepared a content safety capability or policy check for the lab.
 
+### Downloads (one click)
+- (Optional) [Download `architecture-lab3.svg`](assets/architecture-lab3.svg?raw=1)
+
 ## Estimated time
 35 minutes
 
