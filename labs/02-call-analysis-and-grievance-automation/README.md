@@ -107,8 +107,9 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 23. (Microsoft Foundry) In the left pane, select **Playgrounds**. 
 24. (Microsoft Foundry) Select **Chat**. <img width="421" height="185" alt="image" src="https://github.com/user-attachments/assets/803bed74-dcfa-4af8-a7cc-b5445ab5d961" />
 
-25. (Microsoft Foundry) In **Deployment**, select the **Chat model deployment name** from the Prereqs section.
-26. (Microsoft Foundry) In the **System message** box, paste the prompt below exactly.
+25. (Microsoft Foundry) In **Deployment**, select the **Chat model deployment name** from the Prereqs section. <img width="382" height="282" alt="image" src="https://github.com/user-attachments/assets/483275d5-ea47-412e-80fc-0457538cc35b" />
+
+26. (Microsoft Foundry) In the **Give the model instructions and context** box, paste the prompt below exactly.
 
 #### Prompt (copy/paste)
 ```
@@ -141,6 +142,7 @@ Return the result in this exact JSON format:
 	}
 }
 ```
+27. Choose "Apply CHnages" <img width="350" height="49" alt="image" src="https://github.com/user-attachments/assets/5e022431-a3f5-4a82-92e4-6e6b6c7cea83" />
 
 27. (Microsoft Foundry) In the chat input box, paste the prompt below, then select **Send**.
 
@@ -158,13 +160,36 @@ Routing label:
 Generate the JSON now.
 ```
 
-28. (Your notes) Copy the model output into Notepad.
-29. (Your notes) Replace placeholders with these synthetic values:
+#### Chat Sample (copy/paste)
+```
+Example :
+Redacted call transcript:
+"Hello, my name is ***********. I lost my Credit card on ***********, and I would like to request its cancellation. The last purchase I made was of a Chicken parmigiana dish at Contoso Restaurant, located near the Hollywood Museum, for $40. Below is my personal information for validation:\n       Profession: **********\n       Social Security number is ***********\n       Date of birth: ********\n       Phone number: ************\n       Personal address: ***************************************\n       Linked email account: ***************************\n       Swift code: ***********"
+
+Grievance summary (3–5 bullets):
+Lost Credit Card
+Last transaction at Contoso Restaurant
+
+Routing label:
+Credit Cards
+
+Generate the JSON now.
+```
+<img width="1011" height="753" alt="image" src="https://github.com/user-attachments/assets/39f14670-3852-41fc-9612-ae9969ead39e" />
+
+28. (Microsoft Foundry) Send the prompt and check the results.
+29. (Your notes) Copy the model output into Notepad. Notice the results have place holders for input. Thsi input could be merged with a variety of diffeent source systems to populate.
+<img width="599" height="414" alt="image" src="https://github.com/user-attachments/assets/822dc40a-687c-49f4-8195-835e684867bb" />
+
+    
+29. (Your notes) Replace placeholders with these synthetic values. Just copy and paste them into the prompt:
 		- `<CUSTOMER_NAME>` = `Asha Rao`
 		- `<CUSTOMER_REF>` = `SKFIN-DEMO-000123`
 		- `<TICKET_ID>` = `SR-2026-0111-0001`
 		- `<SUPPORT_PHONE>` = `+91 90000 00000`
 		- `<NEXT_CONTACT_DATE>` = `15-Jan-2026`
+    Notice the values have been substitued in.
+<img width="605" height="425" alt="image" src="https://github.com/user-attachments/assets/ba7ccfc2-a9fd-445e-8154-3d66136701d9" />
 
 ## Validation
 - Microsoft Foundry produces a readable transcript from `synthetic-call.wav`.
