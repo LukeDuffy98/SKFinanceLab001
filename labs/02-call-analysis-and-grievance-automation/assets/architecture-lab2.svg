@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="Lab 2 architecture: transcribe call audio, redact PII, summarize and route, draft customer comms in Foundry chat">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .card { fill: #111b2e; stroke: #2b3a5a; stroke-width: 2; rx: 18; }
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .h { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #e7eefc; }
+      .p { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #c6d3ee; }
+      .small { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #b3c4e6; }
+      .arrow { stroke: #7aa2ff; stroke-width: 3; fill: none; marker-end: url(#arrowHead); }
+      .pill { fill: #1a2a4a; stroke: #2b3a5a; stroke-width: 2; rx: 16; }
+      .accent { fill: #7aa2ff; }
+    </style>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#7aa2ff" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="560" />
+
+  <text class="title" x="48" y="62">Lab 2 — Call analysis & grievance automation (Architecture)</text>
+  <text class="small" x="48" y="92">Audio → transcript → PII redaction → summary + routing → (optional) customer comms draft</text>
+
+  <!-- Input: Synthetic audio -->
+  <rect class="card" x="48" y="150" width="290" height="150" rx="18" />
+  <circle class="accent" cx="86" cy="188" r="10" />
+  <text class="h" x="108" y="194">Input: call audio</text>
+  <text class="p" x="72" y="230">Student uploads a</text>
+  <text class="p" x="72" y="254">synthetic call file</text>
+  <text class="p" x="72" y="278">into Foundry.</text>
+
+  <!-- Step 1: Speech to text -->
+  <rect class="card" x="380" y="150" width="360" height="150" rx="18" />
+  <circle class="accent" cx="418" cy="188" r="10" />
+  <text class="h" x="440" y="194">1) Transcribe (Speech)</text>
+  <text class="p" x="404" y="230">Speech playground converts</text>
+  <text class="p" x="404" y="254">audio into a transcript.</text>
+  <text class="p" x="404" y="278">(Text output)</text>
+
+  <!-- Step 2: PII redaction -->
+  <rect class="card" x="792" y="150" width="360" height="150" rx="18" />
+  <circle class="accent" cx="830" cy="188" r="10" />
+  <text class="h" x="852" y="194">2) Redact PII (Language)</text>
+  <text class="p" x="816" y="230">PII detection identifies</text>
+  <text class="p" x="816" y="254">and redacts obvious PII</text>
+  <text class="p" x="816" y="278">in the transcript.</text>
+
+  <!-- Step 3: Summary + routing -->
+  <rect class="pill" x="48" y="340" width="560" height="170" rx="18" />
+  <text class="h" x="84" y="380">3) Create grievance summary + routing label</text>
+  <text class="p" x="84" y="416">Student writes a short 3–5 bullet summary</text>
+  <text class="p" x="84" y="442">and assigns one routing label (e.g., Dispute).</text>
+  <text class="p" x="84" y="468">Outcome: structured notes ops teams can act on.</text>
+
+  <!-- Step 4: Optional comms draft -->
+  <rect class="pill" x="640" y="340" width="512" height="170" rx="18" />
+  <text class="h" x="676" y="380">Optional — Draft customer comms (Chat)</text>
+  <text class="p" x="676" y="416">Use the redacted transcript as context</text>
+  <text class="p" x="676" y="442">to draft a safe, customer-ready response.</text>
+  <text class="p" x="676" y="468">Always human review before sending.</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M338 225 L380 225" />
+  <path class="arrow" d="M740 225 L792 225" />
+  <path class="arrow" d="M972 300 C972 340, 900 360, 840 380" />
+  <path class="arrow" d="M972 300 C972 330, 980 340, 1000 350" opacity="0" />
+  <path class="arrow" d="M792 265 C730 330, 640 360, 608 380" />
+  <text class="small" x="760" y="332">Redacted text</text>
+
+  <path class="arrow" d="M560 425 L640 425" />
+</svg>

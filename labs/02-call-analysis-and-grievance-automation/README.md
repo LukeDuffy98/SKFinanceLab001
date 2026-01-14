@@ -25,6 +25,8 @@
 40 minutes
 
 ## Architecture sketch
+![Lab 2 architecture diagram](assets/architecture-lab2.svg)
+
 - Microsoft Foundry transcribes a synthetic audio file into text.
 - Microsoft Foundry performs PII redaction.
 - You create a summary and a routing label that the SK Finance operations team could act on.

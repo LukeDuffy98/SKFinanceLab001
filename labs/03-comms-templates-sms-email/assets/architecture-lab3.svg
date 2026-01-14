@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="Lab 3 architecture: generate SMS and email templates in Foundry, apply safety system messages and safety check, approve/reject, export approved templates to CSV">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .card { fill: #111b2e; stroke: #2b3a5a; stroke-width: 2; rx: 18; }
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .h { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #e7eefc; }
+      .p { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #c6d3ee; }
+      .small { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #b3c4e6; }
+      .arrow { stroke: #7aa2ff; stroke-width: 3; fill: none; marker-end: url(#arrowHead); }
+      .dashed { stroke-dasharray: 8 8; }
+      .pill { fill: #1a2a4a; stroke: #2b3a5a; stroke-width: 2; rx: 16; }
+      .accent { fill: #7aa2ff; }
+      .ok { fill: #1b3a2a; stroke: #2a6b45; }
+      .no { fill: #3a1b1b; stroke: #6b2a2a; }
+    </style>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#7aa2ff" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="560" />
+
+  <text class="title" x="48" y="62">Lab 3 — Comms templates (Architecture)</text>
+  <text class="small" x="48" y="92">Prompt + placeholders → SMS/email drafts → safety checks → approve/reject → export approved CSV</text>
+
+  <!-- Step 1: Generate drafts -->
+  <rect class="card" x="48" y="150" width="360" height="160" rx="18" />
+  <circle class="accent" cx="86" cy="188" r="10" />
+  <text class="h" x="108" y="194">1) Generate drafts (Chat)</text>
+  <text class="p" x="72" y="232">Student prompts a deployed model</text>
+  <text class="p" x="72" y="256">to produce SMS + Email templates</text>
+  <text class="p" x="72" y="280">using synthetic placeholders.</text>
+
+  <!-- Step 2: Apply safety system messages -->
+  <rect class="card" x="448" y="150" width="360" height="160" rx="18" />
+  <circle class="accent" cx="486" cy="188" r="10" />
+  <text class="h" x="508" y="194">2) Apply safety controls</text>
+  <text class="p" x="472" y="232">Add safety system messages</text>
+  <text class="p" x="472" y="256">and run the lab’s safety check</text>
+  <text class="p" x="472" y="280">(as provided by facilitator).</text>
+
+  <!-- Step 3: Approve / Reject -->
+  <rect class="pill" x="848" y="150" width="304" height="160" rx="18" />
+  <circle class="accent" cx="886" cy="188" r="10" />
+  <text class="h" x="908" y="194">3) Decision</text>
+  <text class="p" x="872" y="232">Approve if safe + compliant</text>
+  <text class="p" x="872" y="256">Reject if it violates rules</text>
+  <text class="p" x="872" y="280">or fails safety checks</text>
+
+  <!-- Approved path -->
+  <rect class="pill ok" x="48" y="360" width="520" height="150" rx="18" />
+  <text class="h" x="84" y="400">Approved → Export to CSV</text>
+  <text class="p" x="84" y="436">Copy approved templates into</text>
+  <text class="p" x="84" y="460">`approved-templates.csv` for reuse</text>
+  <text class="p" x="84" y="484">by CRM or messaging workflows.</text>
+
+  <!-- Rejected path -->
+  <rect class="pill no" x="632" y="360" width="520" height="150" rx="18" />
+  <text class="h" x="668" y="400">Rejected → Fix and regenerate</text>
+  <text class="p" x="668" y="436">Adjust the prompt / rules and</text>
+  <text class="p" x="668" y="460">rerun until the output is safe,</text>
+  <text class="p" x="668" y="484">clear, and compliant.</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M408 230 L448 230" />
+  <path class="arrow" d="M808 230 L848 230" />
+
+  <path class="arrow" d="M1000 310 C1000 340, 820 360, 700 380" class="arrow" />
+  <path class="arrow" d="M1000 310 C1000 340, 360 360, 260 380" class="arrow" />
+
+  <text class="small" x="240" y="338">Approved</text>
+  <text class="small" x="760" y="338">Rejected</text>
+</svg>
