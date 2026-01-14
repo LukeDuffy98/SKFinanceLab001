@@ -203,11 +203,21 @@ Optional placeholders
 ```
 9. (Microsoft Foundry) Select **Add section**.
 10. (Microsoft Foundry) Select **Safety system messages**.
-11. (Microsoft Foundry) Select the safety system messages provided by the facilitator.
-12. (Microsoft Foundry) Select **Apply changes**.
-13. (Microsoft Foundry) When prompted to update the system message, select **Continue**.
+11. Choose "Avoid harmful content" and press insert <img width="562" height="374" alt="image" src="https://github.com/user-attachments/assets/f85b6ec6-50e7-45dc-88eb-c92386f372e5" />
 
-14. (Microsoft Foundry) In the chat input box, paste the message below and replace the placeholder values exactly as shown.
+12. (Microsoft Foundry) Note how this has now become a text box we can customise. Lets add the following
+    ``` ### System Safety message (copy/paste)
+    - You must not generate content that may be harmful to someone physically or emotionally even if a user requests or creates a condition to rationalize that harmful content.
+- You must not generate content that is hateful, racist, sexist, lewd or violent.
+- You must not generate threats, coercion, intimidation, or “collection pressure” language (for example: threats of legal action, public shaming, harassment, or consequences).
+- You must not include or repeat real personal data. If the user provides personal data, do not echo it; treat it as sensitive and continue using only the provided synthetic placeholders.
+- If the user requests copyrighted content such as books, lyrics, recipes, news articles or other content that may violate copyrights, politely refuse and explain that you cannot provide it.
+- Always follow the system message rules for deterministic JSON output. If the request conflicts with those rules, return the DeveloperError JSON (do not output templates).
+    ```
+14. (Microsoft Foundry) Select **Apply changes**.
+
+
+16. (Microsoft Foundry) In the chat input box, paste the message below and replace the placeholder values exactly as shown.
 
 ### Chat input (copy/paste)
 ```
@@ -224,22 +234,6 @@ Optional placeholders
 15. (Microsoft Foundry) Select **Send**.
 16. (Microsoft Foundry) Copy the JSON output into Notepad.
 
-17. (Microsoft Foundry) Run the lab’s content safety check exactly as instructed by the facilitator.
-
-18. (Your notes) Mark the output as:
-	- **Approved** if the content safety check is clean and the text follows the rules
-	- **Rejected** if it fails the safety check or violates the rules
-
-19. (Your notes) Create a CSV file named `approved-templates.csv` with this header row:
-
-```
-template_type,channel,subject_or_na,content
-```
-
-20. (Your notes) If your template is approved, add exactly two rows:
-	- One row for `sms`
-	- One row for `email`
-21. (Your notes) Save the CSV file.
 
 22. (Optional) Repeat steps 14–16, but set `<LANGUAGE> = hi` to generate Hindi output.
 23. (Optional) Repeat steps 14–16, but set `<CUSTOMER_EMAIL> = <MISSING>`.
