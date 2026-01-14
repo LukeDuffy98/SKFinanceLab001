@@ -39,9 +39,17 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 
 ## Step-by-step
 1. (Browser) Open the Azure portal: https://portal.azure.com
-2. (Azure portal) In the search box at the top, type `Resource groups` and select **Resource groups**. <img width="840" height="245" alt="image" src="https://github.com/user-attachments/assets/af0e7bc5-e935-4c35-b41d-c81fcc652a40" />
-3. (Azure portal) Select your lab resource group. <img width="833" height="100" alt="image" src="https://github.com/user-attachments/assets/db6d24fe-84c5-430c-8bde-47fd95a7536c" />
-4. (Azure portal) In the resource group **Overview**, locate your **Document Intelligence** resource. <img width="940" height="564" alt="image" src="https://github.com/user-attachments/assets/1dbb8f27-50a7-410e-bd6c-db9f8e87e103" />
+2. (Azure portal) In the search box at the top, type `Resource groups` and select **Resource groups**.
+
+	<img width="840" height="245" alt="image" src="https://github.com/user-attachments/assets/af0e7bc5-e935-4c35-b41d-c81fcc652a40" />
+
+3. (Azure portal) Select your lab resource group.
+
+	<img width="833" height="100" alt="image" src="https://github.com/user-attachments/assets/db6d24fe-84c5-430c-8bde-47fd95a7536c" />
+
+4. (Azure portal) In the resource group **Overview**, locate your **Document Intelligence** resource.
+
+	<img width="940" height="564" alt="image" src="https://github.com/user-attachments/assets/1dbb8f27-50a7-410e-bd6c-db9f8e87e103" />
 5. (Azure portal) Select the Document Intelligence resource.
 6. (Azure portal) Select **Keys and Endpoint**. <img width="1024" height="818" alt="image" src="https://github.com/user-attachments/assets/b1dd098a-402c-47b9-8ead-8d57fad16b5b" />
 7. (Azure portal) Copy the **Endpoint** value to Notepad. Keep this tab open.

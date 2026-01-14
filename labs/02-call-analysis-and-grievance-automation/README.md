@@ -11,7 +11,7 @@
 - Permissions: you have been added to the student group with the “Student Lab Contributor” role on the `skfinance` resource group.
 - Permissions (Microsoft Foundry): the facilitator has granted your student account access to the Foundry project using Azure RBAC:
 	- Role: **Azure AI User**
-	- Scope: the Foundry project `proj-skfinance-nf-resource/proj-skfinance-nf`
+	- Scope: the facilitator-provided Foundry project
 - Facilitator-provisioned Azure AI resource names (in `skfinance`):
 	- Speech: `skfspeech61459`
 	- Language: `skflang61459`
@@ -88,7 +88,7 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 15. (Microsoft Foundry) Select **Try Azure Language Playground**.
 16. (Microsoft Foundry) Select **Extract PII from text**.
 
-	If you can’t see it, scroll the top tiles to the right.
+	If you cannot see it, scroll the top tiles to the right.
 
 	<img width="924" height="344" alt="image" src="https://github.com/user-attachments/assets/2013e666-6d2c-4cef-89e8-841471c2a685" />
 
@@ -99,12 +99,12 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 	<img width="358" height="223" alt="image" src="https://github.com/user-attachments/assets/ac42e493-3c3a-4f2d-855f-3e5be03b2f3a" />
 
 18. (Microsoft Foundry) In the **Configuration** pane, set **Select text language** to **English**.
-19. (Microsoft Foundry) In the **Configuration** pane, set **Select types to include** to include these entity types:
-	 - `Person`
-	 - `Indian Permanent Account Number`
-	 - `DateTime`
-	 - `PhoneNumber`
-	 - `Email`
+19. (Microsoft Foundry) In the **Configuration** pane, set **Select types to include** to these entity types:
+	- `Person`
+	- `Indian Permanent Account Number`
+	- `DateTime`
+	- `PhoneNumber`
+	- `Email`
 
 	<img width="280" height="168" alt="image" src="https://github.com/user-attachments/assets/27f395b5-6d56-4649-b224-24d7c69c6bb8" />
 
@@ -177,17 +177,14 @@ Return the result in this exact JSON format:
 	}
 }
 ```
-27. Choose "Apply CHnages" <img width="350" height="49" alt="image" src="https://github.com/user-attachments/assets/5e022431-a3f5-4a82-92e4-6e6b6c7cea83" />
+30. (Microsoft Foundry) Select **Apply changes**. If you are prompted to update the system message, select **Continue**.
 
-27. (Microsoft Foundry) In the chat input box, paste the prompt below, then select **Send**.
+	<img width="350" height="49" alt="image" src="https://github.com/user-attachments/assets/5e022431-a3f5-4a82-92e4-6e6b6c7cea83" />
+
+31. (Microsoft Foundry) In the chat input box, paste the message below, then select **Send**.
 
 #### Chat input (copy/paste)
 ```
-	30. (Microsoft Foundry) Select **Apply changes**.
-
-	   <img width="350" height="49" alt="image" src="https://github.com/user-attachments/assets/5e022431-a3f5-4a82-92e4-6e6b6c7cea83" />
-
-	31. (Microsoft Foundry) In the chat input box, paste the prompt below, then select **Send**.
 Grievance summary (3–5 bullets):
 <PASTE_YOUR_SUMMARY_HERE>
 
@@ -217,7 +214,7 @@ Generate the JSON now.
 
 32. (Microsoft Foundry) Review the JSON response.
 
-   Expected result: you get one SMS template and one email (subject + body).
+	Expected result: you get one SMS template and one email (subject + body).
 
 33. (Your notes) Copy the model output into Notepad.
 
@@ -246,8 +243,8 @@ Generate the JSON now.
 
 ## Cleanup
 1. (Microsoft Foundry) In the Speech to text playground, remove the uploaded file (if it is still listed).
-2. (Microsoft Foundry) In the PII redaction playground, clear the input (select all text and delete).
-3. (Microsoft Foundry) In the Chat playground, delete the chat content from the page (select all text and delete) so it is not left visible for the next user.
+2. (Microsoft Foundry) In the PII redaction playground, select inside the input area, press `Ctrl+A`, then press `Delete`.
+3. (Microsoft Foundry) In the Chat playground, select inside the chat content area, press `Ctrl+A`, then press `Delete` so it is not left visible for the next user.
 4. (Azure portal) Do **not** delete shared facilitator resources unless the facilitator tells you to.
 
 ## Compliance / safety notes (RBI-aligned)

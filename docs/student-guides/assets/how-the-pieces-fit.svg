@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="How the pieces fit: Resource group with AI resources and Microsoft Foundry project">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .panel { fill: #0f1b33; stroke: #24365e; stroke-width: 2; rx: 16; }
+      .subpanel { fill: #0c1730; stroke: #2b4275; stroke-width: 2; rx: 12; }
+      .chip { fill: #111f3f; stroke: #2b4275; stroke-width: 1.5; rx: 10; }
+      .title { font-family: "Segoe UI", Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #e6eefc; }
+      .h2 { font-family: "Segoe UI", Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #cfe0ff; }
+      .text { font-family: "Segoe UI", Arial, sans-serif; font-size: 15px; fill: #d8e2f3; }
+      .muted { font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; fill: #a9b8d6; }
+      .mono { font-family: Consolas, "Courier New", monospace; font-size: 13px; fill: #d8e2f3; }
+      .arrow { stroke: #6aa6ff; stroke-width: 3; fill: none; }
+    </style>
+
+    <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#6aa6ff" />
+    </marker>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="700" />
+
+  <!-- Header -->
+  <text class="title" x="60" y="70">How the pieces fit (one picture)</text>
+  <text class="muted" x="60" y="98">Beginner mental model: where endpoints/keys live, and how Foundry uses them.</text>
+
+  <!-- Left: Resource group -->
+  <g filter="url(#softShadow)">
+    <rect class="panel" x="60" y="140" width="520" height="500" />
+  </g>
+  <text class="h2" x="90" y="180">Resource group (lab)</text>
+  <text class="muted" x="90" y="205">Container for lab resources in Azure</text>
+
+  <!-- AI resources box -->
+  <rect class="subpanel" x="90" y="235" width="460" height="250" />
+  <text class="h2" x="120" y="275">AI resources</text>
+  <text class="text" x="120" y="302">Speech • Language • Vision • Document Intelligence</text>
+
+  <!-- Endpoint/Key chips -->
+  <rect class="chip" x="120" y="335" width="410" height="62" />
+  <text class="mono" x="145" y="372">Endpoint (URL)</text>
+  <text class="muted" x="310" y="372">service address used by apps/tools</text>
+
+  <rect class="chip" x="120" y="412" width="410" height="62" />
+  <text class="mono" x="145" y="449">Key (secret)</text>
+  <text class="muted" x="310" y="449">credential to call the endpoint</text>
+
+  <!-- Notes inside left -->
+  <rect class="subpanel" x="90" y="505" width="460" height="115" />
+  <text class="h2" x="120" y="545">Safety reminder</text>
+  <text class="text" x="120" y="573">Keys are secrets. Never paste into prompts.</text>
+  <text class="text" x="120" y="598">Never share screenshots that include keys.</text>
+
+  <!-- Right: Foundry project -->
+  <g filter="url(#softShadow)">
+    <rect class="panel" x="640" y="140" width="500" height="500" />
+  </g>
+  <text class="h2" x="670" y="180">Microsoft Foundry project</text>
+  <text class="muted" x="670" y="205">Where you test prompts and run playgrounds</text>
+
+  <!-- Connects box -->
+  <rect class="subpanel" x="670" y="235" width="440" height="120" />
+  <text class="h2" x="700" y="275">Connects to the AI resources</text>
+  <text class="text" x="700" y="302">Uses the endpoints and keys (configured once)</text>
+
+  <!-- Deployment -->
+  <rect class="subpanel" x="670" y="375" width="440" height="105" />
+  <text class="h2" x="700" y="415">Model deployment</text>
+  <text class="text" x="700" y="442">A named model you can use in Foundry</text>
+
+  <!-- Playgrounds -->
+  <rect class="subpanel" x="670" y="500" width="440" height="120" />
+  <text class="h2" x="700" y="540">Playgrounds (Chat)</text>
+  <text class="text" x="700" y="567">Use the deployment to generate drafts</text>
+  <text class="muted" x="700" y="594">(and apply safety system messages)</text>
+
+  <!-- Arrow: Foundry -> AI resources -->
+  <path class="arrow" marker-end="url(#arrowHead)" d="M670 295 C610 295, 610 325, 550 325" />
+  <text class="muted" x="560" y="286">connects</text>
+</svg>

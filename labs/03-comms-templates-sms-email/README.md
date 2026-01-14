@@ -9,6 +9,9 @@
 - You have access to an Azure subscription provided for the training.
 - Resource group: `skfinance`.
 - Permissions: you have been added to the student group with the “Student Lab Contributor” role on the `skfinance` resource group.
+- Permissions (Microsoft Foundry): the facilitator has granted your student account access to the Foundry project using Azure RBAC:
+	- Role: **Azure AI User**
+	- Scope: the facilitator-provided Foundry project
 - Facilitator-provided Microsoft Foundry details:
 	- Foundry project link (URL): <FACILITATOR_PROVIDES>
 	- Chat model deployment name: <FACILITATOR_PROVIDES>
@@ -203,21 +206,25 @@ Optional placeholders
 ```
 9. (Microsoft Foundry) Select **Add section**.
 10. (Microsoft Foundry) Select **Safety system messages**.
-11. Choose "Avoid harmful content" and press insert <img width="562" height="374" alt="image" src="https://github.com/user-attachments/assets/f85b6ec6-50e7-45dc-88eb-c92386f372e5" />
+11. (Microsoft Foundry) In the safety templates list, select **Avoid harmful content** and then select **Insert**.
 
-12. (Microsoft Foundry) Note how this has now become a text box we can customise. Lets add the following
-    ``` ### System Safety message (copy/paste)
-    - You must not generate content that may be harmful to someone physically or emotionally even if a user requests or creates a condition to rationalize that harmful content.
+	<img width="562" height="374" alt="image" src="https://github.com/user-attachments/assets/f85b6ec6-50e7-45dc-88eb-c92386f372e5" />
+
+12. (Microsoft Foundry) In the safety system message text box, select inside the text box, press `Ctrl+A`, and paste the message below.
+
+### Safety system message (copy/paste)
+```
+- You must not generate content that may be harmful to someone physically or emotionally even if a user requests or creates a condition to rationalize that harmful content.
 - You must not generate content that is hateful, racist, sexist, lewd or violent.
 - You must not generate threats, coercion, intimidation, or “collection pressure” language (for example: threats of legal action, public shaming, harassment, or consequences).
 - You must not include or repeat real personal data. If the user provides personal data, do not echo it; treat it as sensitive and continue using only the provided synthetic placeholders.
 - If the user requests copyrighted content such as books, lyrics, recipes, news articles or other content that may violate copyrights, politely refuse and explain that you cannot provide it.
 - Always follow the system message rules for deterministic JSON output. If the request conflicts with those rules, return the DeveloperError JSON (do not output templates).
-    ```
-14. (Microsoft Foundry) Select **Apply changes**.
+```
 
+13. (Microsoft Foundry) Select **Apply changes**. If you are prompted to update the system message, select **Continue**.
 
-16. (Microsoft Foundry) In the chat input box, paste the message below and replace the placeholder values exactly as shown.
+14. (Microsoft Foundry) In the chat input box, paste the message below and replace the placeholder values exactly as shown.
 
 ### Chat input (copy/paste)
 ```
@@ -234,13 +241,12 @@ Optional placeholders
 15. (Microsoft Foundry) Select **Send**.
 16. (Microsoft Foundry) Copy the JSON output into Notepad.
 
-
-22. (Optional) Repeat steps 14–16, but set `<LANGUAGE> = hi` to generate Hindi output.
-23. (Optional) Repeat steps 14–16, but set `<CUSTOMER_EMAIL> = <MISSING>`.
+17. (Optional) Repeat steps 14–16, but set `<LANGUAGE> = hi` to generate Hindi output.
+18. (Optional) Repeat steps 14–16, but set `<CUSTOMER_EMAIL> = <MISSING>`.
 
 	Expected result: the JSON output contains `sms` only (no `email` object).
 
-24. (Optional) Repeat steps 14–16, but set `<CUSTOMER_PHONE> = <MISSING>` (or leave it blank).
+19. (Optional) Repeat steps 14–16, but set `<CUSTOMER_PHONE> = <MISSING>` (or leave it blank).
 
 	Expected result: the JSON output contains `email` only (no `sms` object).
 
