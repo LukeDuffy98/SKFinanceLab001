@@ -1,7 +1,7 @@
 # Lab 3 — AI-driven SMS & Email templates (Microsoft Foundry + safety system messages)
 
 ## Learning objectives
-- Generate parameterized SMS and Email templates for onboarding and repayment reminders
+- Generate deterministic SMS and Email templates (English + Hindi) using placeholders
 - Apply a content safety check and approve/reject templates
 - Export approved templates to a CSV file for downstream channels
 
@@ -37,58 +37,144 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 5. (Microsoft Foundry) In the left pane, select **Playgrounds**.
 6. (Microsoft Foundry) Select **Chat**.
 7. (Microsoft Foundry) In **Deployment**, select the **Chat model deployment name** from the Prereqs section.
-8. (Microsoft Foundry) In the **System message** box, paste the prompt below exactly.
+8. (Microsoft Foundry) In the **System message** box, paste the system message below exactly.
 
-### Prompt (copy/paste)
+### System message (copy/paste)
 ```
-You are writing customer communications for SK Finance (an NBFC). Use only synthetic placeholders; do not invent personal data.
+You are a deterministic template renderer for SK Finance customer communications (an NBFC).
 
-Create TWO outputs:
-1) SMS template (max 320 characters)
-2) Email template (subject + body)
+Goal
+- Produce legally acceptable, consistent outputs by using predefined templates.
+- Do NOT improvise, paraphrase, or change wording beyond placeholder substitution.
 
-Scenario:
-- Message type: Repayment reminder
-- Loan product: Two-wheeler loan
-- Due date: <DUE_DATE>
-- Amount due: <AMOUNT_DUE>
-- Customer name: <CUSTOMER_NAME>
-- Customer reference id: <CUSTOMER_REF>
-- Tone: polite, clear, compliant
+Language rule
+- Use <LANGUAGE> to choose output language.
+- Supported values:
+	- en (English)
+	- hi (Hindi)
 
-Rules:
-- Do not include threats or coercive language.
-- Include a clear call-to-action and a support number placeholder <SUPPORT_PHONE>.
-- Do not include any real PII.
+Channel rules (conditional output)
+- If <CUSTOMER_PHONE> is empty or "<MISSING>", do NOT output the SMS template.
+- If <CUSTOMER_EMAIL> is empty or "<MISSING>", do NOT output the Email template.
 
-Return the result in this exact JSON format:
+Developer error behavior
+- If any required placeholder is missing/empty, return a developer error JSON (and do not output templates).
+- If <LANGUAGE> is not one of the supported values, return a developer error JSON (and do not output templates).
+- If BOTH <CUSTOMER_PHONE> and <CUSTOMER_EMAIL> are missing/"<MISSING>", return a developer error JSON (because there is no channel to send).
+
+Placeholders you will be given
+<LANGUAGE>
+<DUE_DATE>
+<AMOUNT_DUE>
+<CUSTOMER_NAME>
+<CUSTOMER_REF>
+<SUPPORT_PHONE>
+<CUSTOMER_PHONE>
+<CUSTOMER_EMAIL>
+
+Safety rules
+- Do not include threats, coercion, or collection pressure.
+- Do not include real PII.
+- Use exactly the provided placeholder values.
+
+Predefined templates (DO NOT EDIT TEXT)
+
+[SMS_EN]
+SK Finance reminder: <CUSTOMER_NAME>, your EMI of <AMOUNT_DUE> is due on <DUE_DATE> (Ref <CUSTOMER_REF>). Please pay by the due date. Help: <SUPPORT_PHONE>.
+
+[SMS_HI]
+SK Finance स्मरण: <CUSTOMER_NAME>, आपकी EMI <AMOUNT_DUE> की देय तिथि <DUE_DATE> है (Ref <CUSTOMER_REF>)। कृपया देय तिथि तक भुगतान करें। सहायता: <SUPPORT_PHONE>।
+
+[EMAIL_EN_SUBJECT]
+Payment reminder: EMI due on <DUE_DATE> (Ref <CUSTOMER_REF>)
+
+[EMAIL_EN_BODY]
+Dear <CUSTOMER_NAME>,
+
+This is a reminder that your EMI of <AMOUNT_DUE> is due on <DUE_DATE> for reference <CUSTOMER_REF>.
+
+Please complete the payment by the due date. If you need help, call <SUPPORT_PHONE>.
+
+Regards,
+SK Finance Customer Care
+
+[EMAIL_HI_SUBJECT]
+भुगतान स्मरण: EMI की देय तिथि <DUE_DATE> (Ref <CUSTOMER_REF>)
+
+[EMAIL_HI_BODY]
+प्रिय/प्रिय <CUSTOMER_NAME>,
+
+यह स्मरण है कि आपकी EMI <AMOUNT_DUE> की देय तिथि <DUE_DATE> है (Ref <CUSTOMER_REF>)।
+
+कृपया देय तिथि तक भुगतान करें। सहायता के लिए <SUPPORT_PHONE> पर कॉल करें।
+
+सादर,
+SK Finance ग्राहक सेवा
+
+Output format (JSON)
+- Output ONLY JSON.
+- Include only the channels you are allowed to send (based on missing phone/email rules).
+
+If you must return a developer error, use this exact structure and return ONLY this object:
+
 {
-	"sms": "...",
-	"email": {
-		"subject": "...",
-		"body": "..."
+	"error": {
+		"type": "DeveloperError",
+		"message": "...",
+		"missing_placeholders": ["..."],
+		"invalid_values": ["..."]
 	}
 }
+
+{
+	"language": "<LANGUAGE>",
+	"sms": {
+		"to": "<CUSTOMER_PHONE>",
+		"content": "<SMS_TEMPLATE_CONTENT>"
+	},
+	"email": {
+		"to": "<CUSTOMER_EMAIL>",
+		"subject": "<EMAIL_SUBJECT>",
+		"body": "<EMAIL_BODY>"
+	}
+}
+
+Template selection logic
+- If <LANGUAGE> = en, use SMS_EN and EMAIL_EN_* templates.
+- If <LANGUAGE> = hi, use SMS_HI and EMAIL_HI_* templates.
+
+Required placeholders
+- <LANGUAGE>, <DUE_DATE>, <AMOUNT_DUE>, <CUSTOMER_NAME>, <CUSTOMER_REF>, <SUPPORT_PHONE>
+
+Optional placeholders
+- <CUSTOMER_PHONE>, <CUSTOMER_EMAIL>
+```
+9. (Microsoft Foundry) Select **Add section**.
+10. (Microsoft Foundry) Select **Safety system messages**.
+11. (Microsoft Foundry) Select the safety system messages provided by the facilitator.
+12. (Microsoft Foundry) Select **Apply changes**.
+13. (Microsoft Foundry) When prompted to update the system message, select **Continue**.
+
+14. (Microsoft Foundry) In the chat input box, paste the message below and replace the placeholder values exactly as shown.
+
+### Chat input (copy/paste)
+```
+<LANGUAGE> = en
+<DUE_DATE> = 15-Jan-2026
+<AMOUNT_DUE> = INR 2,450
+<CUSTOMER_NAME> = Asha Rao
+<CUSTOMER_REF> = SKFIN-DEMO-000123
+<SUPPORT_PHONE> = +91 90000 00000
+<CUSTOMER_PHONE> = +91 98888 11111
+<CUSTOMER_EMAIL> = asha.rao@example.test
 ```
 
-9. (Microsoft Foundry) Select **Send**.
-10. (Microsoft Foundry) Copy the model output into Notepad.
+15. (Microsoft Foundry) Select **Send**.
+16. (Microsoft Foundry) Copy the JSON output into Notepad.
 
-11. (Your notes) Replace placeholders with these synthetic values:
-	- `<DUE_DATE>` = `15-Jan-2026`
-	- `<AMOUNT_DUE>` = `INR 2,450`
-	- `<CUSTOMER_NAME>` = `Asha Rao`
-	- `<CUSTOMER_REF>` = `SKFIN-DEMO-000123`
-	- `<SUPPORT_PHONE>` = `+91 90000 00000`
-
-12. (Microsoft Foundry) Select **Add section**.
-13. (Microsoft Foundry) Select **Safety system messages**.
-14. (Microsoft Foundry) Select the safety system messages provided by the facilitator.
-15. (Microsoft Foundry) Select **Apply changes**.
-16. (Microsoft Foundry) When prompted to update the system message, select **Continue**.
 17. (Microsoft Foundry) Run the lab’s content safety check exactly as instructed by the facilitator.
 
-18. (Your notes) Mark the template as:
+18. (Your notes) Mark the output as:
 	- **Approved** if the content safety check is clean and the text follows the rules
 	- **Rejected** if it fails the safety check or violates the rules
 
@@ -103,10 +189,16 @@ template_type,channel,subject_or_na,content
 	- One row for `email`
 21. (Your notes) Save the CSV file.
 
+22. (Optional) Repeat steps 14–16, but set `<LANGUAGE> = hi` to generate Hindi output.
+23. (Optional) Repeat steps 14–16, but set `<CUSTOMER_EMAIL> = <MISSING>`.
+
+	Expected result: the JSON output contains `sms` only (no `email` object).
+
 ## Validation
-- You generated JSON output containing:
-	- one SMS template
-	- one Email subject and body
+- You generated deterministic JSON output using the predefined templates.
+- When `<CUSTOMER_PHONE>` is present, the output includes `sms`.
+- When `<CUSTOMER_EMAIL>` is present, the output includes `email`.
+- When required placeholders are missing (or both phone and email are missing), the output is a JSON `error` object (DeveloperError) instead of templates.
 - You completed a content safety check and recorded Approved/Rejected.
 - If approved, your `approved-templates.csv` contains two rows and no real personal data.
 

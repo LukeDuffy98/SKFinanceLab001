@@ -38,78 +38,113 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 - You create a summary and a routing label that the SK Finance operations team could act on.
 
 ## Step-by-step
-1. (Browser) Open Microsoft Foundry: https://ai.azure.com <img width="1255" height="694" alt="image" src="https://github.com/user-attachments/assets/eaa9f01a-75f2-408a-b8dc-9f5ff6d5cbb0" />
+1. (Browser) Open Microsoft Foundry: https://ai.azure.com
+
+	<img width="1255" height="694" alt="image" src="https://github.com/user-attachments/assets/eaa9f01a-75f2-408a-b8dc-9f5ff6d5cbb0" />
 
 2. (Microsoft Foundry) Select **Sign in** and sign in with the same account you use for the Azure portal.
-3. (Microsoft Foundry) In the portal header, make sure the **New Foundry** toggle is **Off** (you are using **Foundry (classic)**).  <img width="304" height="44" alt="image" src="https://github.com/user-attachments/assets/f644e240-3e15-4c3a-b29f-b4288adbb1f6" />
+3. (Microsoft Foundry) In the portal header, make sure the **New Foundry** toggle is **Off** (you are using **Foundry (classic)**).
+
+	<img width="304" height="44" alt="image" src="https://github.com/user-attachments/assets/f644e240-3e15-4c3a-b29f-b4288adbb1f6" />
 
 4. (Microsoft Foundry) Open the project using the facilitator-provided **Foundry project link (URL)**.
-   https://ai.azure.com/foundryProject/overview?tid=6a450216-13ff-486c-8de5-6bbef7b20ae2&wsid=/subscriptions/782036da-846b-492b-99f4-43f86a3e5697/resourceGroups/skfinance/providers/Microsoft.CognitiveServices/accounts/proj-skfinance-nf-resource/projects/proj-skfinance-nf
-   <img width="541" height="313" alt="image" src="https://github.com/user-attachments/assets/3bce2ae6-1f6b-4e41-9979-e7d928339d89" />
 
+	Expected result: you can see the project **Overview** page.
+
+	<img width="541" height="313" alt="image" src="https://github.com/user-attachments/assets/3bce2ae6-1f6b-4e41-9979-e7d928339d89" />
 
 ### Part A — Transcribe the call (Speech to text playground)
-5. (Microsoft Foundry) In the left pane, select **Playgrounds**. <img width="165" height="122" alt="image" src="https://github.com/user-attachments/assets/41b7f3ba-f6cc-4a2f-a090-d142f62366e9" />
+5. (Microsoft Foundry) In the left pane, select **Playgrounds**.
 
-6. (Microsoft Foundry) Select **Try the Speech playground**. <img width="995" height="442" alt="image" src="https://github.com/user-attachments/assets/8667834a-8db9-4fd0-aebe-20918ca9557d" />
+	<img width="165" height="122" alt="image" src="https://github.com/user-attachments/assets/41b7f3ba-f6cc-4a2f-a090-d142f62366e9" />
+
+6. (Microsoft Foundry) Select **Try the Speech playground**.
+
+	<img width="995" height="442" alt="image" src="https://github.com/user-attachments/assets/8667834a-8db9-4fd0-aebe-20918ca9557d" />
 
 7. (Microsoft Foundry) Select **Fast transcription**.
-8. (Microsoft Foundry) Expand Advanced Options and toggle "Speaker diarization" to on and select "Maximum number of speakers" to 2 <img width="271" height="543" alt="image" src="https://github.com/user-attachments/assets/602f041b-6b4e-4913-b75f-2670e8630555" />
+8. (Microsoft Foundry) Select **Show advanced options**.
+9. (Microsoft Foundry) Turn **Speaker diarization** **On**.
+10. (Microsoft Foundry) Set **Maximum number of speakers** to `2`.
 
-9. (Microsoft Foundry) Upload `synthetic-call.wav`. <img width="254" height="166" alt="image" src="https://github.com/user-attachments/assets/573b623a-74f9-4e86-9fa7-f3876e5bb394" />
+	<img width="271" height="543" alt="image" src="https://github.com/user-attachments/assets/602f041b-6b4e-4913-b75f-2670e8630555" />
 
-10. (Microsoft Foundry) Notice it will start automatically.
-11. (Microsoft Foundry) Copy the transcript output into Notepad. There is a copy button to copy the transcript. It is different to the download buttin which downloads the wav file. <img width="509" height="118" alt="image" src="https://github.com/user-attachments/assets/72a9a9f8-d39c-4a8a-8dcc-cdf5fef0cf97" />
+11. (Microsoft Foundry) Upload `synthetic-call.wav`.
 
+	<img width="254" height="166" alt="image" src="https://github.com/user-attachments/assets/573b623a-74f9-4e86-9fa7-f3876e5bb394" />
+
+12. (Microsoft Foundry) Wait for the transcription to complete.
+
+	Expected result: you can read the transcript in the output area.
+
+13. (Microsoft Foundry) Select the **Copy transcript** button, then paste the transcript into Notepad.
+
+	Note: the **Download** button downloads the audio file; you need **Copy transcript**.
+
+	<img width="509" height="118" alt="image" src="https://github.com/user-attachments/assets/72a9a9f8-d39c-4a8a-8dcc-cdf5fef0cf97" />
 
 ### Part B — Redact PII (Language PII redaction playground)
-11. (Microsoft Foundry) In the left pane, select **Playgrounds**.
-12. (Microsoft Foundry) Select **Try Azure Language Playground**.
-13. (Microsoft Foundry) Select **Extract PII from text**. You may need to scroll to the right. <img width="924" height="344" alt="image" src="https://github.com/user-attachments/assets/2013e666-6d2c-4cef-89e8-841471c2a685" />
+14. (Microsoft Foundry) In the left pane, select **Playgrounds**.
+15. (Microsoft Foundry) Select **Try Azure Language Playground**.
+16. (Microsoft Foundry) Select **Extract PII from text**.
 
-14. (Microsoft Foundry) Paste the transcript into the input area. Notice this text has no speakers identified. It is just the text. You can either copy and paste the previous output form teh crseen, capturing the "Speaker 1" and "Spaeker 2 tags" or we recomend using the "Banking" sample <img width="358" height="223" alt="image" src="https://github.com/user-attachments/assets/ac42e493-3c3a-4f2d-855f-3e5be03b2f3a" />
+	If you can’t see it, scroll the top tiles to the right.
 
-15. (Microsoft Foundry) In the **Configuration** pane, set **Select text language** to **English**.
-16. (Microsoft Foundry) In the **Configuration** pane, set **Select types to include** to include these entity types:
-    - `Person`
-    - `Indian Permanent Account Number`
-    - `DateTime`
-    - `PhoneNumber`
-    - `Email`
-<img width="280" height="168" alt="image" src="https://github.com/user-attachments/assets/27f395b5-6d56-4649-b224-24d7c69c6bb8" />
+	<img width="924" height="344" alt="image" src="https://github.com/user-attachments/assets/2013e666-6d2c-4cef-89e8-841471c2a685" />
 
-17. (Microsoft Foundry) Select **Run**. <img width="595" height="91" alt="image" src="https://github.com/user-attachments/assets/71dfdf5d-2db1-4867-bf32-9459db34894e" />
+17. (Microsoft Foundry) Paste the transcript into the input area.
 
-18. (Microsoft Foundry) Set the **Hide PII** and copty output into Notepad. <img width="364" height="40" alt="image" src="https://github.com/user-attachments/assets/8de1a205-61da-4446-9620-eb9289b00436" />
+	Important: paste the transcript text only (remove any lines like “Speaker 1:” / “Speaker 2:” before you run redaction).
 
+	<img width="358" height="223" alt="image" src="https://github.com/user-attachments/assets/ac42e493-3c3a-4f2d-855f-3e5be03b2f3a" />
+
+18. (Microsoft Foundry) In the **Configuration** pane, set **Select text language** to **English**.
+19. (Microsoft Foundry) In the **Configuration** pane, set **Select types to include** to include these entity types:
+	 - `Person`
+	 - `Indian Permanent Account Number`
+	 - `DateTime`
+	 - `PhoneNumber`
+	 - `Email`
+
+	<img width="280" height="168" alt="image" src="https://github.com/user-attachments/assets/27f395b5-6d56-4649-b224-24d7c69c6bb8" />
+
+20. (Microsoft Foundry) Select **Run**.
+
+	<img width="595" height="91" alt="image" src="https://github.com/user-attachments/assets/71dfdf5d-2db1-4867-bf32-9459db34894e" />
+
+21. (Microsoft Foundry) Turn **Hide PII** **On**.
+22. (Microsoft Foundry) Copy the redacted output into Notepad.
+
+	<img width="364" height="40" alt="image" src="https://github.com/user-attachments/assets/8de1a205-61da-4446-9620-eb9289b00436" />
 
 ### Part C — Summarize and route
+23. (Your notes) Create a 3–5 bullet summary of the grievance using this format:
+	- Customer issue:
+	- Impact:
+	- What the agent did:
+	- Next action required:
 
-19. (Your notes) Create a 3–5 bullet summary of the grievance using this format:
-		- Customer issue:
-		- Impact:
-		- What the agent did:
-		- Next action required:
+24. (Your notes) Assign exactly one routing label from this list:
+	- `Collections`
+	- `Service request`
+	- `Dispute`
+	- `Onboarding`
 
-20. (Your notes) Assign exactly one routing label from this list:
-		- `Collections`
-		- `Service request`
-		- `Dispute`
-		- `Onboarding`
-
-
-21. (Your notes) Write your final output:
-		- Routing label: <one label>
-		- Summary: <3–5 bullets>
+25. (Your notes) Write your final output:
+	- Routing label: <one label>
+	- Summary: <3–5 bullets>
 
 ### Part D — Draft customer communications from the redacted call
-22. (Microsoft Foundry) Open the same project using the facilitator-provided **Foundry project link (URL)**.
-23. (Microsoft Foundry) In the left pane, select **Playgrounds**. 
-24. (Microsoft Foundry) Select **Chat**. <img width="421" height="185" alt="image" src="https://github.com/user-attachments/assets/803bed74-dcfa-4af8-a7cc-b5445ab5d961" />
+26. (Microsoft Foundry) In the left pane, select **Playgrounds**.
+27. (Microsoft Foundry) Select **Chat**.
 
-25. (Microsoft Foundry) In **Deployment**, select the **Chat model deployment name** from the Prereqs section. <img width="382" height="282" alt="image" src="https://github.com/user-attachments/assets/483275d5-ea47-412e-80fc-0457538cc35b" />
+	<img width="421" height="185" alt="image" src="https://github.com/user-attachments/assets/803bed74-dcfa-4af8-a7cc-b5445ab5d961" />
 
-26. (Microsoft Foundry) In the **Give the model instructions and context** box, paste the prompt below exactly.
+28. (Microsoft Foundry) In **Deployment**, select the **Chat model deployment name** from the Prereqs section.
+
+	<img width="382" height="282" alt="image" src="https://github.com/user-attachments/assets/483275d5-ea47-412e-80fc-0457538cc35b" />
+
+29. (Microsoft Foundry) In the **Give the model instructions and context** box, paste the prompt below exactly.
 
 #### Prompt (copy/paste)
 ```
@@ -148,9 +183,11 @@ Return the result in this exact JSON format:
 
 #### Chat input (copy/paste)
 ```
-Redacted call transcript:
-<PASTE_REDACTED_TRANSCRIPT_HERE>
+	30. (Microsoft Foundry) Select **Apply changes**.
 
+	   <img width="350" height="49" alt="image" src="https://github.com/user-attachments/assets/5e022431-a3f5-4a82-92e4-6e6b6c7cea83" />
+
+	31. (Microsoft Foundry) In the chat input box, paste the prompt below, then select **Send**.
 Grievance summary (3–5 bullets):
 <PASTE_YOUR_SUMMARY_HERE>
 
@@ -160,35 +197,42 @@ Routing label:
 Generate the JSON now.
 ```
 
-#### Chat Sample (copy/paste)
+#### Example (copy/paste)
 ```
-Example :
 Redacted call transcript:
-"Hello, my name is ***********. I lost my Credit card on ***********, and I would like to request its cancellation. The last purchase I made was of a Chicken parmigiana dish at Contoso Restaurant, located near the Hollywood Museum, for $40. Below is my personal information for validation:\n       Profession: **********\n       Social Security number is ***********\n       Date of birth: ********\n       Phone number: ************\n       Personal address: ***************************************\n       Linked email account: ***************************\n       Swift code: ***********"
+"Hi, I am ***********. I am calling about my loan account ***********. An EMI was debited twice on ***********. I have already raised a complaint, but I have not received an update. Please confirm the reversal timeline."
 
 Grievance summary (3–5 bullets):
-Lost Credit Card
-Last transaction at Contoso Restaurant
+- Customer issue: EMI debited twice
+- Impact: Customer wants reversal timeline
+- What the agent did: Confirmed complaint exists and captured details
+- Next action required: Validate duplicate debit and initiate reversal
 
 Routing label:
-Credit Cards
+Dispute
 
 Generate the JSON now.
 ```
 <img width="1011" height="753" alt="image" src="https://github.com/user-attachments/assets/39f14670-3852-41fc-9612-ae9969ead39e" />
 
-28. (Microsoft Foundry) Send the prompt and check the results.
-29. (Your notes) Copy the model output into Notepad. Notice the results have place holders for input. Thsi input could be merged with a variety of diffeent source systems to populate.
+32. (Microsoft Foundry) Review the JSON response.
+
+   Expected result: you get one SMS template and one email (subject + body).
+
+33. (Your notes) Copy the model output into Notepad.
+
+   Note: the output contains placeholders that would be filled by your systems in a real deployment.
 <img width="599" height="414" alt="image" src="https://github.com/user-attachments/assets/822dc40a-687c-49f4-8195-835e684867bb" />
 
-    
-29. (Your notes) Replace placeholders with these synthetic values. Just copy and paste them into the prompt:
-		- `<CUSTOMER_NAME>` = `Asha Rao`
-		- `<CUSTOMER_REF>` = `SKFIN-DEMO-000123`
-		- `<TICKET_ID>` = `SR-2026-0111-0001`
-		- `<SUPPORT_PHONE>` = `+91 90000 00000`
-		- `<NEXT_CONTACT_DATE>` = `15-Jan-2026`
-    Notice the values have been substitued in.
+
+34. (Your notes) Replace placeholders with these synthetic values:
+	- `<CUSTOMER_NAME>` = `Asha Rao`
+	- `<CUSTOMER_REF>` = `SKFIN-DEMO-000123`
+	- `<TICKET_ID>` = `SR-2026-0111-0001`
+	- `<SUPPORT_PHONE>` = `+91 90000 00000`
+	- `<NEXT_CONTACT_DATE>` = `15-Jan-2026`
+
+   Expected result: the SMS and email read cleanly with the synthetic values substituted.
 <img width="605" height="425" alt="image" src="https://github.com/user-attachments/assets/ba7ccfc2-a9fd-445e-8154-3d66136701d9" />
 
 ## Validation
