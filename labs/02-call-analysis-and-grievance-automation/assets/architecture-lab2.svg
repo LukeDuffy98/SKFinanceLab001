@@ -19,7 +19,7 @@
 
   <rect class="bg" x="0" y="0" width="1200" height="560" />
 
-  <text class="title" x="48" y="62">Lab 2 — Call analysis & grievance automation (Architecture)</text>
+  <text class="title" x="48" y="62">Lab 2 — Call analysis &amp; grievance automation (Architecture)</text>
   <text class="small" x="48" y="92">Audio → transcript → PII redaction → summary + routing → (optional) customer comms draft</text>
 
   <!-- Input: Synthetic audio -->

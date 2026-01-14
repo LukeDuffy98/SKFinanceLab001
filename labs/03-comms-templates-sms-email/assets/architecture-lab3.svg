@@ -67,8 +67,8 @@
   <path class="arrow" d="M408 230 L448 230" />
   <path class="arrow" d="M808 230 L848 230" />
 
-  <path class="arrow" d="M1000 310 C1000 340, 820 360, 700 380" class="arrow" />
-  <path class="arrow" d="M1000 310 C1000 340, 360 360, 260 380" class="arrow" />
+  <path class="arrow" d="M1000 310 C1000 340, 820 360, 700 380" />
+  <path class="arrow" d="M1000 310 C1000 340, 360 360, 260 380" />
 
   <text class="small" x="240" y="338">Approved</text>
   <text class="small" x="760" y="338">Rejected</text>
