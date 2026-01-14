@@ -31,12 +31,32 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 
 ## Step-by-step
 1. (Browser) Open Microsoft Foundry: https://ai.azure.com
+
+	<img width="1255" height="694" alt="image" src="https://github.com/user-attachments/assets/eaa9f01a-75f2-408a-b8dc-9f5ff6d5cbb0" />
+
 2. (Microsoft Foundry) Select **Sign in** and sign in with the same account you use for the Azure portal.
-3. (Microsoft Foundry) In the portal header, make sure the **New Foundry** toggle is **Off**.
+3. (Microsoft Foundry) In the portal header, make sure the **New Foundry** toggle is **Off** (you are using **Foundry (classic)**).
+
+	<img width="304" height="44" alt="image" src="https://github.com/user-attachments/assets/f644e240-3e15-4c3a-b29f-b4288adbb1f6" />
+
 4. (Microsoft Foundry) Open the project using the facilitator-provided **Foundry project link (URL)**.
+
+	Expected result: you can see the project **Overview** page.
+
+	<img width="541" height="313" alt="image" src="https://github.com/user-attachments/assets/3bce2ae6-1f6b-4e41-9979-e7d928339d89" />
+
 5. (Microsoft Foundry) In the left pane, select **Playgrounds**.
+
+	<img width="165" height="122" alt="image" src="https://github.com/user-attachments/assets/41b7f3ba-f6cc-4a2f-a090-d142f62366e9" />
+
 6. (Microsoft Foundry) Select **Chat**.
+
+	<img width="421" height="185" alt="image" src="https://github.com/user-attachments/assets/803bed74-dcfa-4af8-a7cc-b5445ab5d961" />
+
 7. (Microsoft Foundry) In **Deployment**, select the **Chat model deployment name** from the Prereqs section.
+
+	<img width="382" height="282" alt="image" src="https://github.com/user-attachments/assets/483275d5-ea47-412e-80fc-0457538cc35b" />
+
 8. (Microsoft Foundry) In the **System message** box, paste the system message below exactly.
 
 ### System message (copy/paste)
