@@ -54,13 +54,17 @@ Language rule
 	- hi (Hindi)
 
 Channel rules (conditional output)
-- If <CUSTOMER_PHONE> is empty or "<MISSING>", do NOT output the SMS template.
-- If <CUSTOMER_EMAIL> is empty or "<MISSING>", do NOT output the Email template.
+- If <CUSTOMER_PHONE> is empty or "<MISSING>", treat it as missing and do NOT output the SMS template.
+- If <CUSTOMER_EMAIL> is empty or "<MISSING>", treat it as missing and do NOT output the Email template.
 
 Developer error behavior
 - If any required placeholder is missing/empty, return a developer error JSON (and do not output templates).
 - If <LANGUAGE> is not one of the supported values, return a developer error JSON (and do not output templates).
 - If BOTH <CUSTOMER_PHONE> and <CUSTOMER_EMAIL> are missing/"<MISSING>", return a developer error JSON (because there is no channel to send).
+
+Important
+- <CUSTOMER_PHONE> and <CUSTOMER_EMAIL> are OPTIONAL. Do not include them in `missing_placeholders`.
+- Only list required placeholders in `missing_placeholders`.
 
 Placeholders you will be given
 <LANGUAGE>
@@ -114,6 +118,7 @@ SK Finance ग्राहक सेवा
 Output format (JSON)
 - Output ONLY JSON.
 - Include only the channels you are allowed to send (based on missing phone/email rules).
+- If a channel is not allowed, OMIT the entire `sms` or `email` property (do not include an empty object).
 
 If you must return a developer error, use this exact structure and return ONLY this object:
 
@@ -193,6 +198,10 @@ template_type,channel,subject_or_na,content
 23. (Optional) Repeat steps 14–16, but set `<CUSTOMER_EMAIL> = <MISSING>`.
 
 	Expected result: the JSON output contains `sms` only (no `email` object).
+
+24. (Optional) Repeat steps 14–16, but set `<CUSTOMER_PHONE> = <MISSING>` (or leave it blank).
+
+	Expected result: the JSON output contains `email` only (no `sms` object).
 
 ## Validation
 - You generated deterministic JSON output using the predefined templates.
