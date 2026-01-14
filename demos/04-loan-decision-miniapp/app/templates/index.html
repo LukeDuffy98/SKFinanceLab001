@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SK Finance — Loan decision demo</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>SK Finance — Loan decision demo</h1>
+      <p class="sub">Upload → extract → decide → record → communicate</p>
+    </header>
+
+    {% if error %}
+      <div class="card error">
+        <h2>Error</h2>
+        <p>{{ error }}</p>
+      </div>
+    {% endif %}
+
+    <section class="card">
+      <h2>1) Upload loan application form</h2>
+      <form action="/analyze" method="post" enctype="multipart/form-data">
+        <div class="row">
+          <label for="file">Loan application form (PDF/image)</label>
+          <input id="file" name="file" type="file" accept="application/pdf,image/*" required />
+        </div>
+        <div class="row">
+          <label for="application_id">Application ID (for demo)</label>
+          <input id="application_id" name="application_id" type="text" value="APP-1001" />
+          <p class="hint">Used to load applicant properties from <code>data/applicants.json</code>.</p>
+        </div>
+        <button type="submit">Run demo</button>
+      </form>
+    </section>
+
+    {% if result %}
+      <section class="grid">
+        <div class="card">
+          <h2>2) Extracted values</h2>
+          <pre class="pre">{{ result.extracted_json }}</pre>
+          <p class="hint">Saved to <code>{{ result.saved_application_path }}</code></p>
+        </div>
+
+        <div class="card">
+          <h2>3) Decision</h2>
+          <div class="kv">
+            <div><span class="k">Requested amount</span><span class="v">₹{{ result.requested_amount }}</span></div>
+            <div><span class="k">Monthly income</span><span class="v">₹{{ result.monthly_income }}</span></div>
+            <div><span class="k">Max allowed (10× income)</span><span class="v">₹{{ result.max_allowed }}</span></div>
+            <div><span class="k">Decision</span><span class="v badge {{ 'ok' if result.decision == 'Approved' else 'no' }}">{{ result.decision }}</span></div>
+          </div>
+          <p class="hint">Saved to <code>{{ result.saved_decision_path }}</code></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>4) Comms drafts (templates + placeholders)</h2>
+        <p class="hint">These drafts must be reviewed and approved before sending.</p>
+        <div class="grid2">
+          <div>
+            <h3>SMS draft</h3>
+            <textarea rows="6">{{ result.sms_draft }}</textarea>
+          </div>
+          <div>
+            <h3>Email draft</h3>
+            <textarea rows="10">{{ result.email_draft }}</textarea>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    <footer class="footer">
+      <p>Demo only. Synthetic data. No real customer information.</p>
+    </footer>
+  </main>
+</body>
+</html>

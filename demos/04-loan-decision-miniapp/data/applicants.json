@@ -1,0 +1,50 @@
+{
+  "APP-1001": {
+    "customer_name": "Asha Sharma",
+    "segment": "Salaried",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  },
+  "APP-1002": {
+    "customer_name": "Ravi Iyer",
+    "segment": "Self-employed",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  },
+  "APP-1003": {
+    "customer_name": "Neha Kulkarni",
+    "segment": "Salaried",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  },
+  "APP-1004": {
+    "customer_name": "Imran Khan",
+    "segment": "Salaried",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  },
+  "APP-1005": {
+    "customer_name": "Priya Nair",
+    "segment": "Self-employed",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  },
+  "APP-1006": {
+    "customer_name": "Sandeep Singh",
+    "segment": "Self-employed",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  },
+  "APP-1007": {
+    "customer_name": "Meera Joshi",
+    "segment": "Self-employed",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  },
+  "APP-1008": {
+    "customer_name": "Arjun Verma",
+    "segment": "Salaried",
+    "preferred_language": "en",
+    "support_number": "+91-22-4000-0000"
+  }
+}
