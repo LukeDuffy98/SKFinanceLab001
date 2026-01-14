@@ -38,24 +38,37 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 - You create a summary and a routing label that the SK Finance operations team could act on.
 
 ## Step-by-step
-1. (Browser) Open Microsoft Foundry: https://ai.azure.com
+1. (Browser) Open Microsoft Foundry: https://ai.azure.com <img width="1255" height="694" alt="image" src="https://github.com/user-attachments/assets/eaa9f01a-75f2-408a-b8dc-9f5ff6d5cbb0" />
+
 2. (Microsoft Foundry) Select **Sign in** and sign in with the same account you use for the Azure portal.
-3. (Microsoft Foundry) In the portal header, make sure the **New Foundry** toggle is **Off** (you are using **Foundry (classic)**).
+3. (Microsoft Foundry) In the portal header, make sure the **New Foundry** toggle is **Off** (you are using **Foundry (classic)**).  <img width="304" height="44" alt="image" src="https://github.com/user-attachments/assets/f644e240-3e15-4c3a-b29f-b4288adbb1f6" />
+
 4. (Microsoft Foundry) Open the project using the facilitator-provided **Foundry project link (URL)**.
+   https://ai.azure.com/foundryProject/overview?tid=6a450216-13ff-486c-8de5-6bbef7b20ae2&wsid=/subscriptions/782036da-846b-492b-99f4-43f86a3e5697/resourceGroups/skfinance/providers/Microsoft.CognitiveServices/accounts/proj-skfinance-nf-resource/projects/proj-skfinance-nf
+   <img width="541" height="313" alt="image" src="https://github.com/user-attachments/assets/3bce2ae6-1f6b-4e41-9979-e7d928339d89" />
+
 
 ### Part A — Transcribe the call (Speech to text playground)
-5. (Microsoft Foundry) In the left pane, select **Playgrounds**.
-6. (Microsoft Foundry) Select **Try the Speech playground**.
-7. (Microsoft Foundry) Select **Real-time transcription**.
-8. (Microsoft Foundry) Upload `synthetic-call.wav`.
-9. (Microsoft Foundry) Select **Start**.
-10. (Microsoft Foundry) Copy the transcript output into Notepad.
+5. (Microsoft Foundry) In the left pane, select **Playgrounds**. <img width="165" height="122" alt="image" src="https://github.com/user-attachments/assets/41b7f3ba-f6cc-4a2f-a090-d142f62366e9" />
+
+6. (Microsoft Foundry) Select **Try the Speech playground**. <img width="995" height="442" alt="image" src="https://github.com/user-attachments/assets/8667834a-8db9-4fd0-aebe-20918ca9557d" />
+
+7. (Microsoft Foundry) Select **Fast transcription**.
+8. (Microsoft Foundry) Expand Advanced Options and toggle "Speaker diarization" to on and select "Maximum number of speakers" to 2 <img width="271" height="543" alt="image" src="https://github.com/user-attachments/assets/602f041b-6b4e-4913-b75f-2670e8630555" />
+
+9. (Microsoft Foundry) Upload `synthetic-call.wav`. <img width="254" height="166" alt="image" src="https://github.com/user-attachments/assets/573b623a-74f9-4e86-9fa7-f3876e5bb394" />
+
+10. (Microsoft Foundry) Notice it will start automatically.
+11. (Microsoft Foundry) Copy the transcript output into Notepad. There is a copy button to copy the transcript. It is different to the download buttin which downloads the wav file. <img width="509" height="118" alt="image" src="https://github.com/user-attachments/assets/72a9a9f8-d39c-4a8a-8dcc-cdf5fef0cf97" />
+
 
 ### Part B — Redact PII (Language PII redaction playground)
 11. (Microsoft Foundry) In the left pane, select **Playgrounds**.
 12. (Microsoft Foundry) Select **Try Azure Language Playground**.
-13. (Microsoft Foundry) Select **Extract PII from text**.
-14. (Microsoft Foundry) Paste the transcript into the input area.
+13. (Microsoft Foundry) Select **Extract PII from text**. You may need to scroll to the right. <img width="924" height="344" alt="image" src="https://github.com/user-attachments/assets/2013e666-6d2c-4cef-89e8-841471c2a685" />
+
+14. (Microsoft Foundry) Paste the transcript into the input area. Notice this text has no speakers identified. It is just the text. You can either copy and paste the previous output form teh crseen, capturing the "Speaker 1" and "Spaeker 2 tags" or we recomend using the "Banking" sample <img width="358" height="223" alt="image" src="https://github.com/user-attachments/assets/ac42e493-3c3a-4f2d-855f-3e5be03b2f3a" />
+
 15. (Microsoft Foundry) In the **Configuration** pane, set **Select text language** to **English**.
 16. (Microsoft Foundry) In the **Configuration** pane, set **Select types to include** to include these entity types:
     - `Person`
@@ -63,9 +76,12 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
     - `DateTime`
     - `PhoneNumber`
     - `Email`
-    - `ID`
-17. (Microsoft Foundry) Select **Detect**.
-18. (Microsoft Foundry) Copy the **redacted** output into Notepad.
+<img width="280" height="168" alt="image" src="https://github.com/user-attachments/assets/27f395b5-6d56-4649-b224-24d7c69c6bb8" />
+
+17. (Microsoft Foundry) Select **Run**. <img width="595" height="91" alt="image" src="https://github.com/user-attachments/assets/71dfdf5d-2db1-4867-bf32-9459db34894e" />
+
+18. (Microsoft Foundry) Set the **Hide PII** and copty output into Notepad. <img width="364" height="40" alt="image" src="https://github.com/user-attachments/assets/8de1a205-61da-4446-9620-eb9289b00436" />
+
 
 ### Part C — Summarize and route
 
@@ -88,8 +104,9 @@ To open in a new tab: right-click the link and select **Open link in new tab**.
 
 ### Part D — Draft customer communications from the redacted call
 22. (Microsoft Foundry) Open the same project using the facilitator-provided **Foundry project link (URL)**.
-23. (Microsoft Foundry) In the left pane, select **Playgrounds**.
-24. (Microsoft Foundry) Select **Chat**.
+23. (Microsoft Foundry) In the left pane, select **Playgrounds**. 
+24. (Microsoft Foundry) Select **Chat**. <img width="421" height="185" alt="image" src="https://github.com/user-attachments/assets/803bed74-dcfa-4af8-a7cc-b5445ab5d961" />
+
 25. (Microsoft Foundry) In **Deployment**, select the **Chat model deployment name** from the Prereqs section.
 26. (Microsoft Foundry) In the **System message** box, paste the prompt below exactly.
 
