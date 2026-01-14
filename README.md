@@ -25,18 +25,21 @@ On the page:
 
 ## Labs (do these in order)
 
-1. Lab 1 — KYC document verification (Document Intelligence + Vision):
-	- labs/01-kyc-document-verification/README.md
-2. Lab 2 — Call analysis and grievance automation:
-	- labs/02-call-analysis-and-grievance-automation/README.md
-3. Lab 3 — Comms templates (SMS + email):
-	- labs/03-comms-templates-sms-email/README.md
+1. Lab 1 — KYC document verification (Document Intelligence + Vision)
+	- What you achieve: extract key KYC fields from a synthetic ID image, interpret confidence scores, and decide what needs manual review.
+	- Start: [labs/01-kyc-document-verification/README.md](labs/01-kyc-document-verification/README.md)
+2. Lab 2 — Call analysis and grievance automation
+	- What you achieve: analyze a synthetic customer call transcript to identify intent, extract key details, and draft a structured grievance record for follow-up.
+	- Start: [labs/02-call-analysis-and-grievance-automation/README.md](labs/02-call-analysis-and-grievance-automation/README.md)
+3. Lab 3 — Comms templates (SMS + email)
+	- What you achieve: generate consistent customer-ready message drafts from templates, with safety checks and clear “human approval required” guardrails.
+	- Start: [labs/03-comms-templates-sms-email/README.md](labs/03-comms-templates-sms-email/README.md)
 
 ## Demo (optional)
 
 If your facilitator asks you to run the demo locally:
 
-- Loan decision mini-app: demos/04-loan-decision-miniapp/README.md
+- Loan decision mini-app: [demos/04-loan-decision-miniapp/README.md](demos/04-loan-decision-miniapp/README.md)
 
 ## Compliance / safety (RBI-aligned)
 
