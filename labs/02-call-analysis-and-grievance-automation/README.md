@@ -25,7 +25,7 @@
 40 minutes
 
 ## Architecture sketch
-![Lab 2 architecture diagram](assets/architecture-lab2.svg)
+![Lab 2 architecture diagram](assets/architecture-lab2.svg?raw=1)
 
 - Microsoft Foundry transcribes a synthetic audio file into text.
 - Microsoft Foundry performs PII redaction.

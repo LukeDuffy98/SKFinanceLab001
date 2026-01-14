@@ -22,7 +22,7 @@
 40 minutes
 
 ## Architecture sketch
-![Lab 1 architecture diagram](assets/architecture-lab1.svg)
+![Lab 1 architecture diagram](assets/architecture-lab1.svg?raw=1)
 
 - You upload a synthetic image into Document Intelligence Studio.
 - Document Intelligence runs a prebuilt extraction model and returns fields + confidence.

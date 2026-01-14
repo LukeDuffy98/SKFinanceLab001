@@ -18,7 +18,7 @@
 35 minutes
 
 ## Architecture sketch
-![Lab 3 architecture diagram](assets/architecture-lab3.svg)
+![Lab 3 architecture diagram](assets/architecture-lab3.svg?raw=1)
 
 - You generate customer communications in Microsoft Foundry using a deployed model.
 - You apply a content safety check and approve or reject each draft.
