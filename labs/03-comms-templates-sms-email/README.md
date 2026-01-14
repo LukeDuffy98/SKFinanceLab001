@@ -54,8 +54,8 @@ Language rule
 	- hi (Hindi)
 
 Channel rules (conditional output)
-- If <CUSTOMER_PHONE> is empty or "<MISSING>", treat it as missing and do NOT output the SMS template.
-- If <CUSTOMER_EMAIL> is empty or "<MISSING>", treat it as missing and do NOT output the Email template.
+- If <CUSTOMER_PHONE> is empty, "<MISSING>", or not provided at all, treat it as missing and do NOT output the SMS template.
+- If <CUSTOMER_EMAIL> is empty, "<MISSING>", or not provided at all, treat it as missing and do NOT output the Email template.
 
 Developer error behavior
 - If any required placeholder is missing/empty, return a developer error JSON (and do not output templates).
@@ -63,10 +63,11 @@ Developer error behavior
 - If BOTH <CUSTOMER_PHONE> and <CUSTOMER_EMAIL> are missing/"<MISSING>", return a developer error JSON (because there is no channel to send).
 
 Important
-- <CUSTOMER_PHONE> and <CUSTOMER_EMAIL> are OPTIONAL. Do not include them in `missing_placeholders`.
+- <CUSTOMER_PHONE> and <CUSTOMER_EMAIL> are OPTIONAL.
+- Do not include optional placeholders in `missing_placeholders`.
 - Only list required placeholders in `missing_placeholders`.
 
-Placeholders you will be given
+Placeholders you may be given
 <LANGUAGE>
 <DUE_DATE>
 <AMOUNT_DUE>
@@ -75,6 +76,10 @@ Placeholders you will be given
 <SUPPORT_PHONE>
 <CUSTOMER_PHONE>
 <CUSTOMER_EMAIL>
+
+How to treat missing optional placeholders
+- If <CUSTOMER_PHONE> is not present in the user input, treat it as "<MISSING>".
+- If <CUSTOMER_EMAIL> is not present in the user input, treat it as "<MISSING>".
 
 Safety rules
 - Do not include threats, coercion, or collection pressure.
@@ -131,12 +136,34 @@ If you must return a developer error, use this exact structure and return ONLY t
 	}
 }
 
+Successful output examples (choose ONE based on what is available)
+
+Example A (both channels available)
 {
 	"language": "<LANGUAGE>",
 	"sms": {
 		"to": "<CUSTOMER_PHONE>",
 		"content": "<SMS_TEMPLATE_CONTENT>"
 	},
+	"email": {
+		"to": "<CUSTOMER_EMAIL>",
+		"subject": "<EMAIL_SUBJECT>",
+		"body": "<EMAIL_BODY>"
+	}
+}
+
+Example B (SMS only)
+{
+	"language": "<LANGUAGE>",
+	"sms": {
+		"to": "<CUSTOMER_PHONE>",
+		"content": "<SMS_TEMPLATE_CONTENT>"
+	}
+}
+
+Example C (Email only)
+{
+	"language": "<LANGUAGE>",
 	"email": {
 		"to": "<CUSTOMER_EMAIL>",
 		"subject": "<EMAIL_SUBJECT>",
