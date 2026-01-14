@@ -22,6 +22,8 @@
 40 minutes
 
 ## Architecture sketch
+![Lab 1 architecture diagram](assets/architecture-lab1.svg)
+
 - You upload a synthetic image into Document Intelligence Studio.
 - Document Intelligence runs a prebuilt extraction model and returns fields + confidence.
 - You capture a “manual review” decision for low-confidence fields.

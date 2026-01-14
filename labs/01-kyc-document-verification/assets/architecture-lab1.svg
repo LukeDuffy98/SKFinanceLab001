@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-label="Lab 1 architecture: upload synthetic ID to Document Intelligence, review low-confidence fields, optional Vision image analysis">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .card { fill: #111b2e; stroke: #2b3a5a; stroke-width: 2; rx: 18; }
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .h { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #e7eefc; }
+      .p { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #c6d3ee; }
+      .small { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #b3c4e6; }
+      .arrow { stroke: #7aa2ff; stroke-width: 3; fill: none; marker-end: url(#arrowHead); }
+      .dashed { stroke-dasharray: 8 8; }
+      .pill { fill: #1a2a4a; stroke: #2b3a5a; stroke-width: 2; rx: 16; }
+      .accent { fill: #7aa2ff; }
+    </style>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#7aa2ff" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="540" />
+
+  <text class="title" x="48" y="62">Lab 1 — KYC document verification (Architecture)</text>
+  <text class="small" x="48" y="92">Synthetic image → extraction + confidence → manual review decision → (optional) Vision tags + OCR</text>
+
+  <!-- Step 1: Student uploads image -->
+  <rect class="card" x="48" y="140" width="260" height="150" rx="18" />
+  <circle class="accent" cx="86" cy="178" r="10" />
+  <text class="h" x="108" y="184">1) Upload image</text>
+  <text class="p" x="72" y="220">Student uploads a</text>
+  <text class="p" x="72" y="244">synthetic ID image</text>
+  <text class="p" x="72" y="268">into the Studio.</text>
+
+  <!-- Step 2: Document Intelligence Studio -->
+  <rect class="card" x="360" y="140" width="360" height="150" rx="18" />
+  <circle class="accent" cx="398" cy="178" r="10" />
+  <text class="h" x="420" y="184">2) Document Intelligence</text>
+  <text class="p" x="384" y="220">Prebuilt ID model extracts</text>
+  <text class="p" x="384" y="244">fields (name, DOB, doc #)</text>
+  <text class="p" x="384" y="268">and returns confidence.</text>
+
+  <!-- Step 3: Manual review decision -->
+  <rect class="card" x="772" y="140" width="380" height="150" rx="18" />
+  <circle class="accent" cx="810" cy="178" r="10" />
+  <text class="h" x="832" y="184">3) Manual review decision</text>
+  <text class="p" x="796" y="220">If confidence is low,</text>
+  <text class="p" x="796" y="244">mark the field for</text>
+  <text class="p" x="796" y="268">manual review.</text>
+
+  <!-- Optional: Vision Image Analysis -->
+  <rect class="pill" x="360" y="334" width="792" height="150" rx="18" />
+  <text class="h" x="396" y="374">Optional — Azure AI Vision Image Analysis (REST)</text>
+  <text class="p" x="396" y="410">Call Vision to extract simple signals from the same image:</text>
+  <text class="p" x="396" y="436">• Tags (what the image contains)</text>
+  <text class="p" x="396" y="462">• OCR text (Read) for a quick quality proxy</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M308 215 L360 215" />
+  <path class="arrow" d="M720 215 L772 215" />
+
+  <!-- Optional arrow from Step 1 to Vision -->
+  <path class="arrow dashed" d="M178 290 C178 360, 260 410, 360 410" />
+  <text class="small" x="86" y="392">Optional path</text>
+</svg>
