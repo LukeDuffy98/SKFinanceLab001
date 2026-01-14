@@ -77,9 +77,11 @@ Note: You can download a sample from from the samples folder here : https://gith
 Use this optional section if you want a simple, repeatable way to call the Vision API without relying on portal UI labels.
 
 20. (Azure portal) Return to your lab resource group.
-21. (Azure portal) Select the **Vision** resource: `skfvision61459`.
+21. (Azure portal) Select the **Vision** resource: `skfvision61459`. <img width="924" height="839" alt="image" src="https://github.com/user-attachments/assets/5993848c-2b33-4598-97fc-2e7a92c170d3" />
+
 	- Important: do **not** use the Document Intelligence resource (`skfdocint61459`) for this optional Vision step.
-22. (Azure portal) Select **Keys and Endpoint**.
+22. (Azure portal) Select **Keys and Endpoint**. <img width="1004" height="866" alt="image" src="https://github.com/user-attachments/assets/87963011-deaa-4b37-a640-7a7b5ce4fc37" />
+
 23. (Azure portal) Copy **KEY 1** into Notepad.
 24. (Azure portal) Copy the **Endpoint** into Notepad.
 25. (Windows) Open **Windows PowerShell ISE**.
@@ -88,14 +90,19 @@ Use this optional section if you want a simple, repeatable way to call the Visio
 28. (PowerShell ISE) Update only these three values:
 		- `$visionEndpoint`
 		- `$visionKey`
-		- `$repoRoot`
+		- `$repoRoot` This is the location of the folder we wish to examine the image from, for example 'C:\Users\LukeDuffy\Downloads"
 29. (PowerShell ISE) Select the green **Run Script** button.
-30. (PowerShell ISE) Confirm you see:
+30.  <img width="338" height="68" alt="image" src="https://github.com/user-attachments/assets/00ba9e3b-6690-4da8-8db8-9d7c0b00202a" />
+
+<img width="623" height="216" alt="image" src="https://github.com/user-attachments/assets/e023a9f4-8b09-4b40-be3a-7706bf7c9463" />
+
+
+31. (PowerShell ISE) Confirm you see:
 		- A short table of tags
 		- A **Quality proxy** summary (OCR line count + top tag confidence)
 		- A file named `vision-imageanalysis-output.json` created in the repo root
-31. (Your notes) You do **not** need to open the JSON file for this lab. Keep it only for troubleshooting.
-32. (Your notes) Delete `vision-imageanalysis-output.json` when you finish the lab.
+32. (Your notes) You do **not** need to open the JSON file for this lab. Keep it only for troubleshooting.
+33. (Your notes) Delete `vision-imageanalysis-output.json` when you finish the lab.
 
 ```powershell
 # Optional: Azure AI Vision Image Analysis (REST) for a local image
@@ -113,7 +120,7 @@ $visionEndpoint = $visionEndpoint.TrimEnd('/')
 $repoRoot = "<PASTE_YOUR_REPO_ROOT_PATH_HERE>"
 Set-Location $repoRoot
 
-$imagePath = Join-Path $repoRoot "labs\01-kyc-document-verification\samples\synthetic-kyc-id.jpg"
+$imagePath = Join-Path $repoRoot "\synthetic-kyc-id.jpg"
 if (-not (Test-Path $imagePath)) {
     throw "Image not found: $imagePath"
 }
@@ -158,6 +165,8 @@ $outPath = Join-Path $repoRoot "vision-imageanalysis-output.json"
 $result | ConvertTo-Json -Depth 50 | Out-File -FilePath $outPath -Encoding utf8
 "Saved JSON output to: $outPath" | Write-Host
 ```
+
+
 
 ## Validation
 - Document Intelligence Studio shows extracted fields with confidence scores.
