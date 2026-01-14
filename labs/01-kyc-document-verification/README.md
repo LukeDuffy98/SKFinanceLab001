@@ -19,10 +19,10 @@
 	- In this repo, the file is located at: `labs/01-kyc-document-verification/samples/synthetic-kyc-id.jpg`
 
 ### Downloads (one click)
-- <a href="samples/synthetic-kyc-id.jpg?raw=1" target="_blank" rel="noopener noreferrer">Download `synthetic-kyc-id.jpg`</a>
-- (Optional) <a href="samples/synthetic-kyc-id-2.jpg?raw=1" target="_blank" rel="noopener noreferrer">Download `synthetic-kyc-id-2.jpg`</a>
-- (Optional) <a href="samples/synthetic-kyc-id-3.jpg?raw=1" target="_blank" rel="noopener noreferrer">Download `synthetic-kyc-id-3.jpg`</a>
-- (Optional) <a href="assets/architecture-lab1.svg?raw=1" target="_blank" rel="noopener noreferrer">Download `architecture-lab1.svg`</a>
+- <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id.jpg" target="_blank" rel="noopener noreferrer" download>Download `synthetic-kyc-id.jpg`</a>
+- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id-2.jpg" target="_blank" rel="noopener noreferrer" download>Download `synthetic-kyc-id-2.jpg`</a>
+- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id-3.jpg" target="_blank" rel="noopener noreferrer" download>Download `synthetic-kyc-id-3.jpg`</a>
+- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/assets/architecture-lab1.svg" target="_blank" rel="noopener noreferrer" download>Download `architecture-lab1.svg`</a>
 
 ## Estimated time
 40 minutes
