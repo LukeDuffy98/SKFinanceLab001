@@ -22,8 +22,10 @@
 	- File name: `synthetic-call.wav`
 
 ### Downloads (one click)
-- <a href="../../../../raw/main/labs/02-call-analysis-and-grievance-automation/synthetic-call.wav" target="_blank" rel="noopener noreferrer" download>Download `synthetic-call.wav`</a>
-- (Optional) <a href="../../../../raw/main/labs/02-call-analysis-and-grievance-automation/assets/architecture-lab2.svg" target="_blank" rel="noopener noreferrer" download>Download `architecture-lab2.svg`</a>
+To open in a new tab: right-click the link and select **Open link in new tab**.
+
+- <a href="../../../../raw/main/labs/02-call-analysis-and-grievance-automation/synthetic-call.wav">Download `synthetic-call.wav`</a>
+- (Optional) <a href="../../../../raw/main/labs/02-call-analysis-and-grievance-automation/assets/architecture-lab2.svg">Download `architecture-lab2.svg`</a>
 
 ## Estimated time
 40 minutes

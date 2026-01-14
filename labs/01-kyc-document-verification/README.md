@@ -19,10 +19,12 @@
 	- In this repo, the file is located at: `labs/01-kyc-document-verification/samples/synthetic-kyc-id.jpg`
 
 ### Downloads (one click)
-- <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id.jpg" target="_blank" rel="noopener noreferrer" download>Download `synthetic-kyc-id.jpg`</a>
-- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id-2.jpg" target="_blank" rel="noopener noreferrer" download>Download `synthetic-kyc-id-2.jpg`</a>
-- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id-3.jpg" target="_blank" rel="noopener noreferrer" download>Download `synthetic-kyc-id-3.jpg`</a>
-- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/assets/architecture-lab1.svg" target="_blank" rel="noopener noreferrer" download>Download `architecture-lab1.svg`</a>
+To open in a new tab: right-click the link and select **Open link in new tab**.
+
+- <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id.jpg">Download `synthetic-kyc-id.jpg`</a>
+- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id-2.jpg">Download `synthetic-kyc-id-2.jpg`</a>
+- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/samples/synthetic-kyc-id-3.jpg">Download `synthetic-kyc-id-3.jpg`</a>
+- (Optional) <a href="../../../../raw/main/labs/01-kyc-document-verification/assets/architecture-lab1.svg">Download `architecture-lab1.svg`</a>
 
 ## Estimated time
 40 minutes
